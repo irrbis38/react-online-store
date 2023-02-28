@@ -1,13 +1,84 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+nav {
+    padding: 0 1rem;
+}
+
+main {
+    min-height: calc(100vh - 64px - 70px);
+    padding: 1rem 0;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content {
+    flex-grow: 1;
+}
+
+.cart {
+    position: fixed;
+    padding: 1rem;
+    top: 6rem;
+    right: 1.5rem;
+    z-index: 100;
+    border: none;
+    appearance: none;
+    border-radius: 0.2rem;
+    background-color: #b71c1c;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 767px) {
+    .cart {
+        top: unset;
+        bottom: 4rem;
+    }
+}
+
+.cart__list {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 90;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-height: 80%;
+    overflow-y: auto;
+    box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+.cart__remove {
+    border: none;
+    outline: none;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 80;
+    background-color: rgba(0, 0, 0, 0.5);
 }
