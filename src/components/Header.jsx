@@ -8,7 +8,9 @@ export const Header = () => {
                     </a>
                     <ul id="nav-mobile" className="right hide-on-med-and-down">
                         <li>
-                            <a href="sass.html">Repo</a>
+                            <a href="https://github.com/irrbis38/react-online-store">
+                                Repo
+                            </a>
                         </li>
                     </ul>
                 </div>
